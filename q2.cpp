@@ -5,7 +5,7 @@
 
 // function to call in order measure performance
 long long functionCall() {
-    return 1 + 1;
+    return static_cast<long long>(rand()) + static_cast<long long>(rand());
 }
 
 int main() {
@@ -32,7 +32,7 @@ int main() {
     clock_gettime(CLOCK_REALTIME, &end);
     // convert the nanoseconds from the time elasped of tv_nsec to seconds and add them to the seconds from tv_sec time elapsed
     // this will give the complete time in seconds
-    double getpidTime = (end.tv_sec - start.tv_sec) + ((end.tv_nsec - start.tv_nsec) / 1e9);
+    double getpidTime = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;
 
     // divide by the number of invocations to get the average times for function calls and system calls and display them
     std::cout << "Average time for function call: " << functionTime / numInvocations << " seconds" << std::endl;
