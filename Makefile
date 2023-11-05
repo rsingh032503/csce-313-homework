@@ -1,6 +1,8 @@
 CXX=g++
 CXXFLAGS=-std=c++17 -g -pedantic -Wall -Wextra -Werror -fsanitize=address,undefined -fno-omit-frame-pointer
 
+all: q1 q2 q3 q4 q5
+
 q1: q1.cpp q1.s
 	$(CXX) $(CXXFLAGS) -o q1 q1.cpp q1.s
 
@@ -17,4 +19,4 @@ q5:
 	$(CXX) $(CXXFLAGS) -o q5 q5.cpp
 
 clean:
-	rm -f q1 q2 q3 q4 q5
+	rm -f q1 q2 q3 q4 q5 q5test.txt
