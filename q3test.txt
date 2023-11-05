@@ -1,0 +1,4 @@
+
+This is a test file named "q3test.txt" for question 3 of the CSCE 313 homework.
+It will not be shown when I use 'ls' after this output is displayed.
+- Rahul Singh
